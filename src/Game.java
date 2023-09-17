@@ -209,7 +209,6 @@ public class Game {
 			sec--;
 			//System.out.println("SEC: " + sec);
 			if (sec == 0 || board.getItemFound() != null && sec < 18) {
-				System.out.println("Ended");
 				answerInputTimer.cancel();
 				inputEnded = true;
 				answerInputTimer = new Timer();
