@@ -10,7 +10,7 @@ public class GameObject extends JComponent {
 	private int height, width;
 	
 	public GameObject(String image, int x, int y) {
-		this.image = new ImageIcon(image).getImage();
+		this.image = new ImageIcon("res/" + image).getImage();
 		this.x = x;
 		this.y = y;
 		this.height = this.image.getHeight(this);
@@ -19,7 +19,7 @@ public class GameObject extends JComponent {
 	}
 	
 	public GameObject(String image) {
-		this.image = new ImageIcon(image).getImage();
+		this.image = new ImageIcon("res/" + image).getImage();
 		this.x = 0;
 		this.y = 0;
 		this.height = this.image.getHeight(this);
