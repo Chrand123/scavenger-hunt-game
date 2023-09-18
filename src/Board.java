@@ -15,7 +15,8 @@ public class Board {
 	private List<GameObject> items;
 	private GameObject itemFound;
 	
-	public static double BOARD_SIZE = 9; //Small: 5, Medium: 9, Large: 13
+	public static double BOARD_SIZES[] = {5, 9, 13}; //Small: 5, Medium: 9, Large: 13
+	public static double BOARD_SIZE = BOARD_SIZES[Canvas.activeBtns[1]]; 
 	public final int BOARD_HEIGHT = (int) (BOARD_SIZE * Main.HEIGHT);
 	public final int BOARD_WIDTH = (int) (BOARD_SIZE * Main.WIDTH);
 	

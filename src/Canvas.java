@@ -36,7 +36,7 @@ public class Canvas extends JComponent {
 	//Settings
 	private static final int SMALLBTN_WIDTH = 140;
 	private static final int SMALLBTN_HEIGHT = 50;
-	public static int[] activeBtns = {1, 1, 1};
+	public static int[] activeBtns = {0, 0, 0}; //game length, map size, cpu difficulty
 	public static final Rectangle[] gameLength_Btns = {new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT)};
 	public static final Rectangle[] mapSize_Btns = {new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT)};
 	public static final Rectangle[] cpuDifficulty_Btns = {new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT), new Rectangle(SMALLBTN_WIDTH, SMALLBTN_HEIGHT)};
@@ -61,21 +61,9 @@ public class Canvas extends JComponent {
 		this.WIDTH = width;
 		this.HEIGHT = height;
 		this.board = null;
-		// menu_background = new ImageIcon("menu_background.jpg").getImage();
-		// menu_background = resizeImage(menu_background, Main.WIDTH, Main.HEIGHT);
-
 		menu_background = makeNewImage("menu_background.jpg", Main.WIDTH, Main.HEIGHT, 0);
 		
 		int rankSize = 30;
-		// rank1 = new ImageIcon("1st.png").getImage();
-		// rank1 = resizeImage(rank1, rankSize, rankSize, 4);
-		// rank2 = new ImageIcon("2nd.png").getImage();
-		// rank2 = resizeImage(rank2, rankSize, rankSize, 4);
-		// rank3 = new ImageIcon("3rd.png").getImage();
-		// rank3 = resizeImage(rank3, rankSize, rankSize, 4);
-		// rank4 = new ImageIcon("4th.png").getImage();
-		// rank4 = resizeImage(rank4, rankSize, rankSize, 4);
-
 		rank1 = makeNewImage("1st.png", rankSize, rankSize, 4);
 		rank2 = makeNewImage("2nd.png", rankSize, rankSize, 4);
 		rank3 = makeNewImage("3rd.png", rankSize, rankSize, 4);

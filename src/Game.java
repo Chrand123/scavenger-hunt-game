@@ -13,7 +13,8 @@ public class Game {
 	private String timeLeft;
 	private int playerRank;
 	
-	public static int GAME_LENGTH = 5; //minutes: Short = 2, Medium = 5, Long = 10
+	public static int[] GAME_LENGTHS = {2, 5, 10}; //minutes: Short = 2, Medium = 5, Long = 10
+	public static int GAME_LENGTH = GAME_LENGTHS[Canvas.activeBtns[0]]; 
 	private int minutes;
 	private int seconds;
 	
@@ -25,7 +26,8 @@ public class Game {
 	
 	private boolean countdownEnded;
 	
-	public static int DIFFICULTY = 2; //"easy", "normal", "hard"
+	public static int[] DIFFICULTYS = {1, 2, 3}; //"easy", "normal", "hard"
+	public static int DIFFICULTY = DIFFICULTYS[Canvas.activeBtns[2]];
 	private List<CPU> cpuPlayers;
 	
 	String[] nameArray = {"Daniel", "Mary", "Chris", "Andrew", "Jo", "Joy", "Rachel", "Andy", 

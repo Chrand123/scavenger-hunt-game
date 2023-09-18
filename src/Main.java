@@ -194,25 +194,22 @@ public class Main {
 					if (mouseOver(x, y, Canvas.backBtn)) {
 						gameState = STATE.Menu;	
 					} else {
-						int[] gameLengths = {2, 5, 10};
 						for (int i = 0; i < Canvas.gameLength_Btns.length; i++) {
 							if (mouseOver(x, y, Canvas.gameLength_Btns[i])) {
 								Canvas.activeBtns[0] = i;
-								Game.GAME_LENGTH = gameLengths[i];
+								Game.GAME_LENGTH = Game.GAME_LENGTHS[i];
 							}
 						}
-						int[] boardSizes = {5, 9, 13};
 						for (int i = 0; i < Canvas.mapSize_Btns.length; i++) {
 							if (mouseOver(x, y, Canvas.mapSize_Btns[i])) {
 								Canvas.activeBtns[1] = i;
-								Board.BOARD_SIZE = boardSizes[i];
+								Board.BOARD_SIZE = Board.BOARD_SIZES[i];
 							}
 						}
-						int[] cpuDifficulties = {1, 2, 3};
 						for (int i = 0; i < Canvas.cpuDifficulty_Btns.length; i++) {
 							if (mouseOver(x, y, Canvas.cpuDifficulty_Btns[i])) {
 								Canvas.activeBtns[2] = i;
-								Game.DIFFICULTY = cpuDifficulties[i];
+								Game.DIFFICULTY = Game.DIFFICULTYS[i];
 							}
 						}
 					}
